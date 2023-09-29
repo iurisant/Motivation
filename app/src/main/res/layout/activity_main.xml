@@ -6,40 +6,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/top_bar_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/color_primary"
         android:orientation="horizontal"
-        android:paddingVertical="16dp"
-        android:paddingHorizontal="64dp">
+        android:background="@color/color_primary"
+        android:paddingVertical="16dp">
         <ImageView
             android:id="@+id/all_inclusive"
-            android:layout_width="32dp"
+
+            android:layout_width="0dp"
             android:layout_height="32dp"
+            android:layout_weight="1"
+
             android:src="@drawable/ic_all_inclusive"
-            android:layout_alignParentStart="true"
             android:contentDescription="@string/description_all_inclusive"
             app:tint="@color/color_accent"/>
         <ImageView
             android:id="@+id/smile"
-            android:layout_width="32dp"
+
+            android:layout_width="0dp"
             android:layout_height="32dp"
-            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+
             android:src="@drawable/ic_smile"
             android:contentDescription="@string/description_smile"
             app:tint="@color/color_accent" />
         <ImageView
             android:id="@+id/sunny"
-            android:layout_width="32dp"
+
+            android:layout_width="0dp"
             android:layout_height="32dp"
+            android:layout_weight="1"
+
             android:src="@drawable/ic_sunny"
-            android:layout_alignParentEnd="true"
             android:contentDescription="@string/description_sunny"
             app:tint="@color/color_accent"/>
-    </RelativeLayout>
+    </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -49,32 +53,43 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:text="Olá, Name!"/>
+
+            android:text="Olá, Name!"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto"/>
         <TextView
             android:id="@+id/text_message_motivation"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:text="Message"/>
+            android:layout_centerInParent="true"
+
+            android:text="Message"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto"/>
         <View
             android:layout_width="164dp"
             android:layout_height="4dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/text_message_motivation"
             android:layout_marginTop="32dp"
-            android:background="@color/color_secondary" />
+
+            android:background="@color/color_secondary"
+            android:elevation="5dp"/>
         <Button
+            android:id="@+id/button_new_phrase"
+
             android:layout_width="164dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+
             android:text="Nova frase"
             android:textAllCaps="true"
-            app:cornerRadius="4dp"/>
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto"
+
+            app:cornerRadius="4dp" />
     </RelativeLayout>
 </RelativeLayout>
