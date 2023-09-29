@@ -20,9 +20,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.button_new_phrase -> {
 
             }
-            R.id.button_save_name -> {
-
-            }
         }
     }
 }
